@@ -1,0 +1,26 @@
+{
+  "name": "codeFreezeMonitor",
+  "version": "1.0.0",
+  "description": "Chrome extension for monitoring code freeze in devx",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "babel js/index.js --out-file js/compiled.js && babel js/background.js --out-file js/backgroundCompiled.js && webpack"
+  },
+  "author": "idobas",
+  "license": "ISC",
+  "node": {
+    "fs": "empty"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "jenkins-api": "^0.2.8",
+    "net": "^1.0.2",
+    "tls": "0.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.1.8",
+    "webpack": "^2.2.1"
+  }
+}

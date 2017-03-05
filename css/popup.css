@@ -1,0 +1,74 @@
+h3 {
+    color: red;
+    text-align: center;
+    font-family: ‘Lucida Console’, Monaco, monospace;
+}
+
+h2 {
+    text-align: center;
+    font-family: Gill Sans / Gill Sans MT, sans-serif;
+}
+
+h4 {
+    text-align: center;
+    font-family: Gill Sans / Gill Sans MT, sans-serif;
+}
+
+#moreInfo h2 {
+    text-align: left;
+    font-size: 17px;
+}
+
+#moreInfo h4 {
+    text-align: left;
+    color: #404040;
+}
+
+#moreInfo h3 {
+    text-align: left;
+}
+
+body {
+    min-width: 250px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+#moreInfo a:link {
+    font-size: 14px;
+    font-family: Gill Sans / Gill Sans MT, sans-serif;;
+}
+
+#moreInfo a:hover {
+    color: #85144b;
+}
+
+#moreInfo a {
+    color: #0074D9;
+}
+
+#moreInfo li {
+    margin-bottom: 4px;
+}
+
+#dottedList {
+    list-style-type: disc;
+}
+
+#moreInfoButtonDiv a {
+    text-decoration: none;
+    color: #0074D9;
+}
+
+#moreInfoButtonDiv a:hover {
+    text-decoration: none;
+    color: #85144b;
+}
+
+#moreInfoButtonDiv a:link {
+    text-decoration: none;
+    font-family: Gill Sans / Gill Sans MT, sans-serif;;
+}
