@@ -1,7 +1,18 @@
 import jenkinsapi from 'jenkins-api';
+const jenkins = jenkinsapi.init("http://devx-webide-jenkins.mo.sap.corp:8080", {strictSSL: false});
 
-(function loop() {
-    let jenkins = jenkinsapi.init("http://devx-webide-jenkins.mo.sap.corp:8080", {strictSSL: false});
+chrome.alarms.create('Check code freeze', {
+    when: Date.now() + 10000,
+    periodInMinutes: 0.2
+});
+
+chrome.alarms.onAlarm.addListener(alarm => {
+    if (alarm.name === 'Check code freeze') {
+        loop();
+    }
+});
+
+function loop() {
     try {
         jenkins.last_build_info('greenCI_master', function (err, data) {
             if (!err) {
@@ -46,11 +57,9 @@ import jenkinsapi from 'jenkins-api';
                         break;
                 }
             }
-            setTimeout(loop, 10000);
         });
     }
     catch(err) {
         console.log(err);
-        setTimeout(loop, 10000);
     }
-})();
+}

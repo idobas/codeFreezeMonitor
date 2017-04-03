@@ -3,7 +3,7 @@
 
   "name": "Jenkins code freeze monitor",
   "description": "This chrome extension monitors code freeze",
-  "version": "0.0.0.7",
+  "version": "0.0.1.1",
   "background": {
     "scripts": ["js/background.bundle.js"]
   },
@@ -13,7 +13,8 @@
   },
   "permissions": [
     "<all_urls>",
-    "notifications"
+    "notifications",
+    "alarms"
   ],
   "web_accessible_resources": [
     "icon.png"
